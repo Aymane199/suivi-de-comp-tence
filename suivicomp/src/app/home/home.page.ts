@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +7,6 @@ import {RouterModule} from '@angular/router';
 })
 export class HomePage {
 
-
-  constructor(route: RouterModule) {}
-
+  constructor() {}
 
 }
