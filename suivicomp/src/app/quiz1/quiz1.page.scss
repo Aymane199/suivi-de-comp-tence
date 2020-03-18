@@ -13,3 +13,8 @@ div[scrollx=true] {
     flex: 0 0 auto;
   }
 }
+ion-card{
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+}

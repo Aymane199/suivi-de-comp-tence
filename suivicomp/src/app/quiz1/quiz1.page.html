@@ -1,7 +1,44 @@
-<ion-header>
+
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div style="text-align: center">
+      <img src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_960_720.png" style="height: 100px">
+      <p>Mon profil</p>
+      <p>Modifier mes informations</p>
+    </div>
+
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Les quiz</ion-label>
+        <ion-icon name="list" slot="end"></ion-icon>
+
+      </ion-item>
+      <ion-item>
+        <ion-icon name="checkbox-outline" slot="end"></ion-icon>
+        <ion-label>Les sondages</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-header style="background-color: white">
   <ion-toolbar>
-    <ion-title>Quiz</ion-title>
+    <ion-buttons slot="start">
+
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div style="text-align: center">
+      <ion-title>Accueil</ion-title>
+    </div>
+
   </ion-toolbar>
+
 </ion-header>
 
 
@@ -16,7 +53,7 @@
     <ion-col>
       <div>
         <ion-label>Année</ion-label>
-        <ion-select placeholder="Select">
+        <ion-select placeholder="Select" title="Année">
           <ion-select-option value="3">3</ion-select-option>
           <ion-select-option value="4">4</ion-select-option>
           <ion-select-option value="5">5</ion-select-option>
@@ -44,7 +81,7 @@
         <span>
           <ion-card>
             <ion-card-header>
-                <img >
+              <img style="height: 100px; width: 100px;" src="https://www.zendevs.xyz/wp-content/uploads/2019/03/javascript-1200x900.png"><br>
               <ion-label>JavaScript Test</ion-label>
             </ion-card-header>
           </ion-card>
@@ -52,7 +89,7 @@
       <span>
           <ion-card>
             <ion-card-header>
-                <img >
+                <img style="height: 100px; width: 100px;" src="https://products-images.di-static.com/image/remi-ruppli-algebre-lineaire/9782729809058-475x500-1.jpg"><br>
               <ion-label>Algèbre Test</ion-label>
             </ion-card-header>
           </ion-card>
@@ -60,19 +97,12 @@
       <span>
           <ion-card>
             <ion-card-header>
-                <img >
+                <img style="height:100px; width: 100px;" src="https://i.pinimg.com/originals/fd/d6/46/fdd646896730d5e980851e468f5e25ed.jpg"><br>
               <ion-label>Math Test</ion-label>
             </ion-card-header>
           </ion-card>
         </span>
-        <span>
-          <ion-card>
-            <ion-card-header>
-                <img >
-              <ion-label>IHM Test</ion-label>
-            </ion-card-header>
-          </ion-card>
-        </span>
+        
     </div>
   </div>
 
@@ -82,8 +112,9 @@
   <div class="container">
     <div class="scroll" scrollX="true">
       <span>
-            <ion-card>
+            <ion-card >
               <ion-card-header>
+                <img style="height: 100px; width: 100px;"  src="https://i.pinimg.com/originals/fd/d6/46/fdd646896730d5e980851e468f5e25ed.jpg"><br>
                 <ion-label>Math</ion-label>
               </ion-card-header>
             </ion-card>
@@ -91,6 +122,7 @@
       <span>
             <ion-card>
               <ion-card-header>
+                <img style="height: 100px; width: 100px;"  src="https://img2.freepng.fr/20180831/iua/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b89919299aab1.1956912415357423546294.jpg"><br>
                 <ion-label>Prommation</ion-label>
               </ion-card-header>
             </ion-card>
