@@ -8,10 +8,13 @@ const routes: Routes = [
     path: 'accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   },
+<<<<<<< HEAD
   {
     path: 'quizz3',
     loadChildren: () => import('./quizz3/quizz3.module').then( m => m.Quizz3PageModule)
   },
+=======
+>>>>>>> master
 ];
 
 @NgModule({
