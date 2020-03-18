@@ -19,7 +19,11 @@ const routes: Routes = [
   {
     path: 'quiz4',
     loadChildren: () => import('./quiz4/quiz4.module').then( m => m.Quiz4PageModule)
+  },  {
+    path: 'connexion',
+    loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
   },
+
 
 ];
 
