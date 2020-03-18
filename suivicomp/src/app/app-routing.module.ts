@@ -8,7 +8,14 @@ const routes: Routes = [
     path: 'quiz-etudiant2',
     loadChildren: () => import('./quiz-etudiant2/quiz-etudiant2.module').then( m => m.QuizEtudiant2PageModule)
   },
-
+  {
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  {
+    path: 'quizz3',
+    loadChildren: () => import('./quizz3/quizz3.module').then( m => m.Quizz3PageModule)
+  },
 ];
 
 @NgModule({
