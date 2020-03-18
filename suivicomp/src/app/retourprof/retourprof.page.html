@@ -1,9 +1,85 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>retourprof</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div style="text-align: center">
+        <img src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_960_720.png" style="height: 100px">
+        <p>Mon profil</p>
+        <p>Modifier mes informations</p>
+      </div>
 
-<ion-content>
 
-</ion-content>
+      <ion-list>
+        <a routerLink="/quiz1">
+          <ion-item>
+            <ion-label>Les quiz</ion-label>
+            <ion-icon name="list" slot="end"></ion-icon>
+
+          </ion-item>
+        </a>
+        <ion-item>
+          <ion-icon name="checkbox-outline" slot="end"></ion-icon>
+          <ion-label>Les sondages</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header style="background-color: white">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <div style="text-align: center">
+          <ion-title>Retours des professeurs</ion-title>
+        </div>
+
+      </ion-toolbar>
+
+    </ion-header>
+    <ion-content class="ion-padding">
+     
+    </ion-content>
+    <ion-footer>
+      <ion-row>
+
+        <ion-col col-3>
+          <a routerLink="/quiz1">
+            <ion-card>
+              <ion-card-content style="text-align: center">
+                <ion-icon name="list"></ion-icon>
+                <p>Quizz</p>
+              </ion-card-content>
+            </ion-card>
+          </a>
+        </ion-col>
+
+        <ion-col col-3>
+          <ion-card>
+            <ion-card-content style="text-align: center">
+              <ion-icon name="checkbox-outline"></ion-icon>
+              <p>Sondage</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-3>
+          <ion-card>
+            <ion-card-content style="text-align: center">
+              <ion-icon name="cog"></ion-icon>
+              <p>Paramêtres</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </div>
+</ion-app>
+
+
