@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Javascript Test</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <ion-grid>
+        <ion-row class="ion-justify-content-center ion-padding">
+            <div >
+                <ion-icon   name="checkmark-circle"></ion-icon>
+                <ion-icon  name="checkmark-circle"></ion-icon>
+                <ion-icon  name="close-circle"></ion-icon>
+            </div>
+        </ion-row>
+        <ion-row class="ion-padding">
+            <ion-progress-bar color="secondary" value="0.6" ></ion-progress-bar>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-text>9 secondes restantes</ion-text>
+        </ion-row>
+        <ion-row class="ion-justify-content-center ion-padding-top">
+            <ion-text >Question 5/20</ion-text>
+        </ion-row>
+        <ion-row>
+            <ion-card class="ion-justify-content-center ion-padding">
+                <ion-card-title class="ion-text-center">for(;;)...</ion-card-title>
+                <ion-card-content>que se passe-t-il avec cette instruction ?</ion-card-content>
+            </ion-card>
+        </ion-row>
+        <ion-row >
+            <ion-item>
+                <ion-checkbox ></ion-checkbox>
+                <ion-label>c'est un boucle infinie</ion-label>
+            </ion-item>
+        </ion-row>
+        <ion-row >
+            <ion-item>
+                <ion-checkbox ></ion-checkbox>
+                <ion-label>On obtient la valeur undefined</ion-label>
+            </ion-item>
+        </ion-row>
+        <ion-row >
+            <ion-item>
+                <ion-checkbox ></ion-checkbox>
+                <ion-label>On obtient la valeur null</ion-label>
+            </ion-item>
+        </ion-row>
+
+        <ion-row class="ion-margin-end">
+            <ion-item>
+                <ion-checkbox ></ion-checkbox>
+                <ion-label>il ne se passe rien !</ion-label>
+            </ion-item>
+        </ion-row>
+        <ion-row class="ion-justify-content-center ion-margin-top">
+            <div class="ion-text-center">
+                <ion-button color="primary">Valider</ion-button>
+                <br/>
+                <a>passer à la question suivante</a>
+            </div>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+
+
