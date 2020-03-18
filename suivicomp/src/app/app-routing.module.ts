@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'quiz1',
     loadChildren: () => import('./quiz1/quiz1.module').then( m => m.Quiz1PageModule)
   },
+  {
+    path: 'retourprof',
+    loadChildren: () => import('./retourprof/retourprof.module').then( m => m.RetourprofPageModule)
+  },
 
 
 ];
