@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'connexion', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: 'quiz-etudiant2',
@@ -19,7 +19,8 @@ const routes: Routes = [
   {
     path: 'quiz4',
     loadChildren: () => import('./quiz4/quiz4.module').then( m => m.Quiz4PageModule)
-  },  {
+  },
+  {
     path: 'connexion',
     loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
   },
