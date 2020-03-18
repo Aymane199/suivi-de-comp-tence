@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'connexion',
     loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
   },
+  {
+    path: 'quiz1',
+    loadChildren: () => import('./quiz1/quiz1.module').then( m => m.Quiz1PageModule)
+  },
 
 
 ];

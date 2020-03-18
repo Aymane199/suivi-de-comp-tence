@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-searchbar placeholder="Recherche"></ion-searchbar>
+
+
+
+  <ion-row>
+    <ion-col>
+      <div>
+        <ion-label>Année</ion-label>
+        <ion-select placeholder="Select">
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-label>Thèmes</ion-label>
+        <ion-select placeholder="Select">
+          <ion-select-option value="IHM">IHM</ion-select-option>
+          <ion-select-option value="JavaScript">JavaScript</ion-select-option>
+          <ion-select-option value="Math">Math</ion-select-option>
+        </ion-select>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+
+
+  <ion-label> Quiz récemment ajoutés</ion-label>
+  <div class="container">
+    <div class="scroll" scrollX="true">
+        <span>
+          <ion-card>
+            <ion-card-header>
+                <img >
+              <ion-label>JavaScript Test</ion-label>
+            </ion-card-header>
+          </ion-card>
+        </span>
+      <span>
+          <ion-card>
+            <ion-card-header>
+                <img >
+              <ion-label>Algèbre Test</ion-label>
+            </ion-card-header>
+          </ion-card>
+        </span>
+      <span>
+          <ion-card>
+            <ion-card-header>
+                <img >
+              <ion-label>Math Test</ion-label>
+            </ion-card-header>
+          </ion-card>
+        </span>
+    </div>
+  </div>
+
+
+
+  <ion-label>Filtrer par thème</ion-label>
+  <div class="container">
+    <div class="scroll" scrollX="true">
+      <span>
+            <ion-card>
+              <ion-card-header>
+                <ion-label>Math</ion-label>
+              </ion-card-header>
+            </ion-card>
+          </span>
+      <span>
+            <ion-card>
+              <ion-card-header>
+                <ion-label>Prommation</ion-label>
+              </ion-card-header>
+            </ion-card>
+          </span>
+      <span>
+            <ion-card>
+              <ion-card-header>
+                <ion-label>IHM</ion-label>
+              </ion-card-header>
+            </ion-card>
+          </span>
+      <span>
+            <ion-card>
+              <ion-card-header>
+                <ion-label>BDD</ion-label>
+              </ion-card-header>
+            </ion-card>
+          </span>
+    </div>
+  </div>
+
+
+
+</ion-content>
