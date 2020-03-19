@@ -1,16 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>connexion</ion-title>
+    <ion-title class="ion-text-center">Connexion</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-img [src]="ensim.png"></ion-img>
-  <ion-item>
-    <ion-label>
-      Je suis un 
-    </ion-label>
-  </ion-item>
-  <ion-button color="medium">Professeur</ion-button>
-  <ion-button color="medium">Etudiant</ion-button>
+  <ion-img src="..\assets\ensim.png" class="ion-padding image"></ion-img>
+    <ion-item>
+        <ion-label>
+          <div class="ion-text-center text1">
+            Je suis un 
+          </div>
+        </ion-label>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-button color="clear">Professeur</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-button color="clear">Etudiant</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
 </ion-content>
