@@ -32,7 +32,7 @@
         </ion-row>
         <ion-list>
             <ion-item *ngFor="let qst of currentResponses; let i=index">
-                <ion-checkbox class="ion-margin-end"></ion-checkbox>
+                <ion-checkbox class="ion-margin-end" [(ngModel)]="userResponse[i]"></ion-checkbox>
                 <ion-label>{{qst}}</ion-label>
             </ion-item>
         </ion-list>
