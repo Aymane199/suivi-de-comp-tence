@@ -37,12 +37,35 @@ export class ProfilService {
   // tslint:disable-next-line:variable-name
     private _Resultat: number;
 
+  get Email(): string {
+    return this._Email;
+  }
+
+  set Email(value: string) {
+    this._Email = value;
+  }
+
+  get Pass(): string {
+    return this._Pass;
+  }
+
+  set Pass(value: string) {
+    this._Pass = value;
+  }
+
+  // tslint:disable-next-line:variable-name
+    private _Email: string;
+  // tslint:disable-next-line:variable-name
+    private _Pass: string;
+
 
 
   constructor() {
     this._Nom = 'Miller';
     this._Prenom = 'Marine';
     this._Resultat = 0;
+    this._Email = 'MarineMiller@gmail.com';
+    this._Pass = 'mdp123';
   }
 
   addresult() {
