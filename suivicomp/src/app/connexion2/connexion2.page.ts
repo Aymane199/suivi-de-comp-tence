@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfilService} from '../profil.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connexion2',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Connexion2Page implements OnInit {
 
-  constructor() { }
-
+  constructor(private pr: ProfilService, private router: Router) { }
+    private addresse: string;
+    private motDePasse: string;
   ngOnInit() {
+  }
+  Connexion(){
+    if((this.pr.Email == this.addresse) || (this.pr.Pass == this.motDePasse) ){
+      this.router.navigate(['/accueil']);
+    }
+    else{
+      alert("Email ou Mot de passe incorrect");
+    }
   }
 
 }
