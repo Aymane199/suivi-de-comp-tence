@@ -14,9 +14,4 @@ export class AccueilPage implements OnInit {
 
   ngOnInit() {
   }
-
-  ajout() {
-    this.pr.addresult();
-    this.resultat = this.pr.Resultat;
-  }
 }
