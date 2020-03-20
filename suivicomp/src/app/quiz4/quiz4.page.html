@@ -3,6 +3,7 @@
     <ion-title>
       Java Script Test Corrigé
     </ion-title>
+    <ion-buttons slot="start"> <ion-back-button defaultHref="home"></ion-back-button> </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -11,10 +12,12 @@
     <ion-toolbar>
       <ion-title size="small">Java Script Test Corrigé</ion-title>
     </ion-toolbar>
+
   </ion-header>
 
+
   <ion-text color="black">
-    <h4> Vous avez eu 324 réponses incorrectes</h4>
+    <h4> Vous avez eu 3 réponses incorrectes</h4>
   </ion-text>
 
   <ion-chip>
@@ -36,6 +39,36 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+<ion-row >
+  <ion-row >
+    <ion-item>
+      <ion-checkbox checked="true"></ion-checkbox>
+      <ion-label>c'est une boucle infinie</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-row >
+    <ion-item>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>On obtient la valeur undefined</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-row >
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>On obtient la valeur null</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-row class="">
+    <ion-item >
+      <ion-checkbox></ion-checkbox>
+      <ion-label>il ne se passe rien !</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-card-content>
+    Explication :
+    la réponse à la question est en faite (..) car (..)
+  </ion-card-content>
+</ion-row>
+<ion-button href="#">passer à la question suivante</ion-button>
 
-<!-- Checked Checkbox -->
-<ion-checkbox checked="true"></ion-checkbox>
+
