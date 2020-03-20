@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfilService} from '../profil.service';
 
 @Component({
   selector: 'app-accueil',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accueil.page.scss'],
 })
 export class AccueilPage implements OnInit {
-
-  constructor() { }
+  resultat: number;
+  constructor(private pr: ProfilService) {
+      this.resultat = this.pr.Resultat;
+  }
 
   ngOnInit() {
   }
 
+  ajout() {
+    this.pr.addresult();
+    this.resultat = this.pr.Resultat;
+  }
 }

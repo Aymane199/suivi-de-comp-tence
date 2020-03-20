@@ -53,7 +53,7 @@
            <ion-card-title style="text-decoration: underline">Programmation java</ion-card-title>
          </ion-card-header>
          <ion-card-content>
-           <p>Résultat : 12/20</p>
+           <p>Résultat : {{resultat}}/20</p>
            <p>Date : 17/03</p>
            <div style="text-align: right">
              <p>En attente de retours</p>
@@ -113,6 +113,7 @@
 
         </ion-card-content>
       </ion-card>
+      <ion-button (click)="ajout()">Ajout</ion-button>
     </ion-content>
     <ion-footer>
       <ion-row>
@@ -129,12 +130,13 @@
         </ion-col>
 
         <ion-col col-3>
-          <ion-card>
-            <ion-card-content style="text-align: center">
-              <ion-icon name="checkbox-outline"></ion-icon>
-              <p>Sondage</p>
-            </ion-card-content>
-          </ion-card>
+            <ion-card>
+
+              <ion-card-content style="text-align: center">
+                <ion-icon name="checkbox-outline" ></ion-icon>
+                <p>Sondage</p>
+              </ion-card-content>
+            </ion-card>
         </ion-col>
         <ion-col col-3>
           <ion-card>
