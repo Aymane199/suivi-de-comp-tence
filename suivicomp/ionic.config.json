@@ -1,5 +1,7 @@
 {
   "name": "suivicomp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
