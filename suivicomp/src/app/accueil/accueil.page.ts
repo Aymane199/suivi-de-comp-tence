@@ -13,5 +13,6 @@ export class AccueilPage implements OnInit {
   }
 
   ngOnInit() {
+
   }
 }

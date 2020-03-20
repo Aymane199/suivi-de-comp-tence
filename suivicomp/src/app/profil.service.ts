@@ -57,7 +57,7 @@ export class ProfilService {
     private _Email: string;
   // tslint:disable-next-line:variable-name
     private _Pass: string;
-
+    reponse: Array<number>;
 
 
   constructor() {
