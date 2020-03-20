@@ -1,0 +1,38 @@
+ion-content{
+    font-size: 0.8em;
+}
+.image{
+    max-width: 250px;
+    max-height: 110px;
+    margin: auto ;
+    margin-top: 10px;
+
+}
+.text1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ion-button{
+    margin: 0px;
+    padding:0px;
+    background-color:white;
+    color: black;
+    width: 100%;
+    border:  1.5px solid ;
+    box-shadow: 2px 2px 1px black;
+}
+.blockcentral{
+    margin: auto;
+    max-width: 200px;
+}
+ion-item{
+    width: 150px;
+    height: 10px;
+}
+ion-input{
+    border: 2px solid;
+    height:30px ;
+    margin: 15px 0px 15px;
+    padding: 8px;
+
+}
