@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="secondary">Nom du quizz transmis</ion-title>
     <ion-buttons>
-      <ion-back-button></ion-back-button>
+      <ion-back-button>
+
+      </ion-back-button>
+      <ion-title>Quizz</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +13,7 @@
 
 <ion-content>
   <div style="text-align: center">
-    <h3 name="BravoOuPas">Félicitation</h3>
+    <h3 name="BravoOuPas">Félicitations</h3>
     <h4 name="Note">Vous avez obtenu 45/10</h4>
   </div>
     <ion-card>
@@ -19,9 +21,12 @@
         <ion-avatar slot="start">
           <img src="..\assets\icon\manouche277-removebg-preview.png"/>
         </ion-avatar>
-        <ion-label>Anthony</ion-label>
-        <ion-label>Points gagnés</ion-label>
-        <ion-label>2000 pts</ion-label>
+        <ion-grid>
+          <ion-row>Anthony</ion-row>
+          <ion-row>
+            Points gagnés : 2000 pts
+          </ion-row>
+        </ion-grid>
       </ion-item>
     </ion-card>
 
@@ -41,8 +46,20 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-card>
+
+  <!--<ion-card>
     <ion-card-title>5.8s</ion-card-title>
     <ion-card-subtitle>Temps moyen/question</ion-card-subtitle>
-  </ion-card>
+  </ion-card>-->
+
+  <ion-grid>
+    <ion-row>
+      <ion-label>Consulter la correction</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-button>Recommencer</ion-button>
+    </ion-row>
+  </ion-grid>
+
+
 </ion-content>
