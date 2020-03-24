@@ -12,7 +12,9 @@ export class TestService {
 
       'what is the correct Javascript syntax to write hello word ?',
 
-      'how to write an IF statement in JavaScript ?'
+      'how to write an IF statement in JavaScript ?',
+
+      'Where is the correct place to insert a JavaScript?'
   ];
 
   responses: string[] = [
@@ -20,13 +22,16 @@ export class TestService {
 
         'echo "hello word"-echo "hello word-dowument.write("helllo word")-respose.write("hello word")',
 
-        'if i = 5 then-if i = 5-if i== 5 then-if(i == 5)'
+        'if i = 5 then-if i = 5-if i== 5 then-if(i == 5)',
+
+        'The head section-The body section-Both the head section and the body section are correct'
   ];
 
   correctResponse: number[] = [
         0,
         2,
-        3
+        3,
+        0
       ];
 
   constructor() {

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TestService} from '../services/test.service';
 import {ProfilService} from '../profil.service';
+import {BehaviorSubject} from "rxjs";
 
 @Component({
     selector: 'app-quiz-etudiant2',
@@ -16,6 +17,10 @@ export class QuizEtudiant2Page implements OnInit {
     currentResponses: string[];
     userResponse: boolean[] = [];
     currentCorrectResponse : number;
+    time: BehaviorSubject<string> = new BehaviorSubject('00:00');
+    timer:number;
+    interval;
+    startDuration =1;
 
     constructor(testService: TestService, private profilService: ProfilService) {
         this.testService = testService;
@@ -25,10 +30,41 @@ export class QuizEtudiant2Page implements OnInit {
         this.currentCorrectResponse = this.testService.correctResponse[this.currentQuestionIndex];
         this.currentResponses = this.testService.responses[this.currentQuestionIndex].split("-");
         this.profilService.reponse=[];
-
+        this.startTimer(this.startDuration);
     }
 
     ngOnInit() {
+
+    }
+
+    startTimer(duration: number){
+        clearInterval(this.interval);
+        this.timer = duration*60;
+        this.updateTimerValue();
+        this.interval = setInterval(()=>{
+            this.updateTimerValue();
+        },1000);
+    }
+
+    updateTimerValue(){
+        let minutes :any = this.timer/60;
+        let seconde: any = this.timer%60;
+
+        minutes= String('0'+Math.floor(minutes)).slice(-2);
+        seconde = String('0'+Math.floor(seconde)).slice(-2);
+        const text = minutes +':'+seconde;
+        this.time.next(text);
+        --this.timer;
+        if(this.timer<-1){
+            if(this.currentQuestionIndex+1 != this.questionCount){
+                this.startTimer(this.startDuration);
+                this.questionSuivant();
+            }else{
+                clearInterval(this.interval);
+                this.time.next('00:00');
+                //this.quizTerminer();
+            }
+        }
     }
 
     responseVerification(){
@@ -52,6 +88,7 @@ export class QuizEtudiant2Page implements OnInit {
     }
 
     questionSuivant() {
+        this.startTimer(1);
         this.responseVerification();
         this.currentQuestionIndex++;
         this.currentQuestion = this.testService.questions[this.currentQuestionIndex];

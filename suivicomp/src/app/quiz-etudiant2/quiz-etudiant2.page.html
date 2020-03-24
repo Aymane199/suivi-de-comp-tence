@@ -10,24 +10,23 @@
 <ion-content>
     <ion-grid>
         <ion-row class="ion-justify-content-center ion-padding">
-            <div>
-                <ion-icon name="close-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="close-circle"></ion-icon>
+            <div *ngFor="let resp of profilService.reponse">
+                <ion-icon *ngIf="resp==0" color="danger" style="width: 30px;height: 30px" name="close-circle"></ion-icon>
+                <ion-icon *ngIf="resp==1" color="primary" style="width: 30px;height: 30px" name="checkmark-circle"></ion-icon>
             </div>
         </ion-row>
         <ion-row class="ion-padding">
-            <ion-progress-bar color="secondary" value="0.6"></ion-progress-bar>
+            <ion-progress-bar color="secondary" value="{{profilService.reponse.length/ questionCount}}"></ion-progress-bar>
         </ion-row>
         <ion-row class="ion-justify-content-center">
-            <ion-text>9 secondes restantes</ion-text>
+            <ion-text>{{time|async}}</ion-text>
         </ion-row>
         <ion-row class="ion-justify-content-center ion-padding-top">
             <ion-text>Question {{currentQuestionIndex+1}}/{{questionCount}}</ion-text>
         </ion-row>
         <ion-row class="ion-justify-content-center">
             <ion-card class="ion-justify-content-center ion-padding">
-                <ion-card-content class="ion-text-center"><p>{{currentQuestion}}</p></ion-card-content>
+                <ion-card-content class="ion-text-center"><p style="color: #0d0d0d">{{currentQuestion}}</p></ion-card-content>
             </ion-card>
         </ion-row>
         <ion-list>
@@ -41,7 +40,7 @@
                 <ion-button color="primary" *ngIf="currentQuestionIndex+1 != questionCount " (click)="questionSuivant()">Suivant</ion-button>
                 <ion-button color="success" *ngIf="currentQuestionIndex+1 == questionCount " routerLink="/quizz3" (click)="quizTerminer()">Terminer</ion-button>
                 <br/>
-                <a >passer à la question suivante</a>
+                <a (click)="questionSuivant()">passer à la question suivante</a>
             </div>
         </ion-row>
     </ion-grid>
