@@ -16,17 +16,17 @@
             </div>
         </ion-row>
         <ion-row class="ion-padding">
-            <ion-progress-bar color="secondary" value="{{profilService.reponse.length/ questionCount}}"></ion-progress-bar>
+            <ion-progress-bar color="secondary" value="{{timer/60}}"></ion-progress-bar>
         </ion-row>
         <ion-row class="ion-justify-content-center">
-            <ion-text>{{time|async}}</ion-text>
+            <ion-text>{{time|async}} </ion-text>
         </ion-row>
         <ion-row class="ion-justify-content-center ion-padding-top">
             <ion-text>Question {{currentQuestionIndex+1}}/{{questionCount}}</ion-text>
         </ion-row>
         <ion-row class="ion-justify-content-center">
             <ion-card class="ion-justify-content-center ion-padding">
-                <ion-card-content class="ion-text-center"><p style="color: #0d0d0d">{{currentQuestion}}</p></ion-card-content>
+                <ion-card-content class="ion-text-center"><p>{{currentQuestion}}</p></ion-card-content>
             </ion-card>
         </ion-row>
         <ion-list>

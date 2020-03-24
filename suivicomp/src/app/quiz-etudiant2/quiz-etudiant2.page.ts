@@ -25,16 +25,20 @@ export class QuizEtudiant2Page implements OnInit {
     constructor(testService: TestService, private profilService: ProfilService) {
         this.testService = testService;
         this.questionCount = testService.questions.length;
+
+    }
+
+    ngOnInit() {
+
+    }
+    ionViewWillEnter(){
         this.currentQuestionIndex = 0;
         this.currentQuestion = this.testService.questions[this.currentQuestionIndex];
         this.currentCorrectResponse = this.testService.correctResponse[this.currentQuestionIndex];
         this.currentResponses = this.testService.responses[this.currentQuestionIndex].split("-");
         this.profilService.reponse=[];
+        this.profilService.reponse.length=0;
         this.startTimer(this.startDuration);
-    }
-
-    ngOnInit() {
-
     }
 
     startTimer(duration: number){
