@@ -38,48 +38,37 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <div style="text-align: center">
-          <ion-title>Retours des professeurs</ion-title>
+          <ion-title>Retour du professeur</ion-title>
         </div>
 
       </ion-toolbar>
 
     </ion-header>
     <ion-content class="ion-padding">
-     
+      <h1 style="text-align: center; text-decoration: underline" >Javascript</h1>
+
+      <p>Résultat : {{Resultat}}/3</p>
+      <p>Effectué le : 17/03</p>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Retour du professeur</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{retour}}</p>
+        </ion-card-content>
+      </ion-card>
+      <div style="text-align: center">
+        <ion-button routerLink="/accueil" >Voir les retours d'un autre quiz</ion-button>
+      </div>
+
     </ion-content>
     <ion-footer>
-      <ion-row>
-
-        <ion-col col-3>
-          <a routerLink="/quiz1">
-            <ion-card>
-              <ion-card-content style="text-align: center">
-                <ion-icon name="list"></ion-icon>
-                <p>Quizz</p>
-              </ion-card-content>
-            </ion-card>
-          </a>
-        </ion-col>
-
-        <ion-col col-3>
-          <ion-card>
-            <ion-card-content style="text-align: center">
-              <ion-icon name="checkbox-outline"></ion-icon>
-              <p>Sondage</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-3>
-          <ion-card>
-            <ion-card-content style="text-align: center">
-              <ion-icon name="cog"></ion-icon>
-              <p>Paramêtres</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+      <div style="text-align: center">
+        <ion-button routerLink="/quiz1">Quiz</ion-button>
+        <ion-button>Sondages</ion-button>
+        <ion-button>Paramêtres</ion-button>
+      </div>
     </ion-footer>
   </div>
 </ion-app>
-
-

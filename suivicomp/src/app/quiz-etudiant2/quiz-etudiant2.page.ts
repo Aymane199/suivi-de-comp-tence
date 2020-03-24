@@ -17,7 +17,7 @@ export class QuizEtudiant2Page implements OnInit {
     userResponse: boolean[] = [];
     currentCorrectResponse : number;
 
-    constructor(testService: TestService,private profilService : ProfilService) {
+    constructor(testService: TestService, private profilService: ProfilService) {
         this.testService = testService;
         this.questionCount = testService.questions.length;
         this.currentQuestionIndex = 0;

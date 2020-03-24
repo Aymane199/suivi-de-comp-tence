@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'connexion2',
     loadChildren: () => import('./connexion2/connexion2.module').then( m => m.Connexion2PageModule)
   },
+  {
+    path: 'retourprof',
+    loadChildren: () => import('./retourprof/retourprof.module').then( m => m.RetourprofPageModule)
+  },
 
 
 
