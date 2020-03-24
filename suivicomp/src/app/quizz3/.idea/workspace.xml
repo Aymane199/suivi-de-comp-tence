@@ -38,7 +38,8 @@
       <workItem from="1584543003439" duration="30000" />
       <workItem from="1584543081641" duration="1659000" />
       <workItem from="1584545274329" duration="117000" />
-      <workItem from="1584709062836" duration="3098000" />
+      <workItem from="1584709062836" duration="4528000" />
+      <workItem from="1585039540920" duration="1729000" />
     </task>
     <servers />
   </component>
@@ -50,9 +51,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584455618609" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584709066169">
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585039540969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584709066169" />
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585039540969" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../quiz-etudiant2/quiz-etudiant2.page.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
