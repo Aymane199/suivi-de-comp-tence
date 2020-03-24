@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TestService} from '../services/test.service';
 import {ProfilService} from '../profil.service';
 import {BehaviorSubject} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-quiz-etudiant2',
@@ -22,7 +23,7 @@ export class QuizEtudiant2Page implements OnInit {
     interval;
     startDuration =1;
 
-    constructor(testService: TestService, private profilService: ProfilService) {
+    constructor(testService: TestService, private profilService: ProfilService,private router:Router) {
         this.testService = testService;
         this.questionCount = testService.questions.length;
 
@@ -66,7 +67,8 @@ export class QuizEtudiant2Page implements OnInit {
             }else{
                 clearInterval(this.interval);
                 this.time.next('00:00');
-                //this.quizTerminer();
+                this.router.navigate(['/quizz3']);
+                this.quizTerminer();
             }
         }
     }

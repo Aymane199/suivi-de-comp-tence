@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class Connexion2Page implements OnInit {
 
   constructor(private pr: ProfilService, private router: Router) { }
-    private addresse: string;
+    private addresse: string = 'MarineMiller@gmail.com';
     private motDePasse: string;
   ngOnInit() {
   }
