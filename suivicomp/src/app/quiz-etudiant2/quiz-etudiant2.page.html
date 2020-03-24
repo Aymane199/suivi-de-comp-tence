@@ -40,7 +40,7 @@
                 <ion-button color="primary" *ngIf="currentQuestionIndex+1 != questionCount " (click)="questionSuivant()">Suivant</ion-button>
                 <ion-button color="success" *ngIf="currentQuestionIndex+1 == questionCount " routerLink="/quizz3" (click)="quizTerminer()">Terminer</ion-button>
                 <br/>
-                <a (click)="questionSuivant()">passer à la question suivante</a>
+                <a  *ngIf="currentQuestionIndex+1 != questionCount " (click)="questionSuivant()">passer à la question suivante</a>
             </div>
         </ion-row>
     </ion-grid>
