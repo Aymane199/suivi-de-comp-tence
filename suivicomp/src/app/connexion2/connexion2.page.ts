@@ -15,7 +15,7 @@ export class Connexion2Page implements OnInit {
   ngOnInit() {
   }
   Connexion(){
-    if((this.pr.Email == this.addresse) || (this.pr.Pass == this.motDePasse) ){
+    if((this.pr.Email == this.addresse) && (this.pr.Pass == this.motDePasse) ){
       this.router.navigate(['/accueil']);
     }
     else{
