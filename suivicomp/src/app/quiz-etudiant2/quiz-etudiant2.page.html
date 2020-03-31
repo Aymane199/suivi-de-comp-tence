@@ -9,13 +9,13 @@
 
 <ion-content>
     <ion-grid>
-        <ion-row class="ion-justify-content-center ion-padding">
+        <ion-row class="ion-justify-content-center ion-padding ">
             <div *ngFor="let resp of profilService.reponse">
                 <ion-icon *ngIf="resp==0" color="danger" style="width: 30px;height: 30px" name="close-circle"></ion-icon>
                 <ion-icon *ngIf="resp==1" color="primary" style="width: 30px;height: 30px" name="checkmark-circle"></ion-icon>
             </div>
         </ion-row>
-        <ion-row class="ion-padding">
+        <ion-row class="ion-padding  ">
             <ion-progress-bar color="secondary" value="{{timer/60}}"></ion-progress-bar>
         </ion-row>
         <ion-row class="ion-justify-content-center">
@@ -24,7 +24,7 @@
         <ion-row class="ion-justify-content-center ion-padding-top">
             <ion-text>Question {{currentQuestionIndex+1}}/{{questionCount}}</ion-text>
         </ion-row>
-        <ion-row class="ion-justify-content-center">
+        <ion-row class="ion-align-items-cente">
             <ion-card class="ion-justify-content-center ion-padding">
                 <ion-card-content class="ion-text-center"><p>{{currentQuestion}}</p></ion-card-content>
             </ion-card>
