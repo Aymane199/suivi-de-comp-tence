@@ -37,6 +37,9 @@ export class RetourprofPage implements OnInit {
       this.retour  = 'Résultat moyen revoir les parties flou du cour de javascript';
     }
     if (this.Resultat == 3){
+      this.retour == 'Super tu as eu un bon score il suffit de réviser encore un peut et tu seras ok sur le javascript';
+    }
+    if (this.Resultat == 4){
       this.retour == 'Bravo ! tu as eu tout bon.';
     }
   }
