@@ -15,7 +15,8 @@ export class AccueilPage implements OnInit {
   constructor(private pr: ProfilService, private ts: TestService) {
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+  ionViewWillEnter(){
     this.nbTrue= 0;
     this.nbFalse = 0;
     for (let i = 0; i < this.ts.responses.length; i++) {

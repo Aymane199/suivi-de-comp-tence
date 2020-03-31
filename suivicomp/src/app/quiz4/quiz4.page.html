@@ -12,35 +12,29 @@
     <ion-row class="ion-justify-content-center ion-padding-top">
       <ion-text>Vous avez eu 3 réponses incorrectes</ion-text>
     </ion-row>
-    <ion-row class="ion-justify-content-center ion-padding  ">
-      <div>1 2 3
-      </div>
-    </ion-row>
-    <ion-row class="ion-justify-content-ion-padding-top " >
-      <ion-card class=ion-justify-content-center>
-        <ion-card-content class=ion-justify-content-center> for(;;)
-          <br>Que se passe t'il avec cette instruction </ion-card-content>
+    <ion-row class="ion-align-items-cente">
+      <ion-card class="ion-justify-content-center ion-padding">
+        <ion-card-content class="ion-text-center "><p>{{currentQuestion}}</p></ion-card-content>
       </ion-card>
     </ion-row>
-
     <ion-list>
       <ion-list>
         <ion-item *ngFor="let qst of currentResponses; let i=index">
-          <ion-checkbox class="ion-margin-end" [(ngModel)]="userResponse[i]"></ion-checkbox>
+          <ion-icon  *ngIf="currentCorrectResponse != i " color="danger " style="width: 30px;height: 30px" name="close-circle"></ion-icon>
+          <ion-icon  *ngIf="currentCorrectResponse == i " color="success" style="width: 30px;height: 30px" name="checkmark-circle"></ion-icon>
           <ion-label>{{qst}}</ion-label>
         </ion-item>
       </ion-list>
     </ion-list>
-    <ion-row class="ion-justify-content-center ion-margin-start">
-      <ion-text class=" ">Explication : </ion-text>
+    <ion-row class="ion-justify-content-start ion-margin-start">
+      <ion-text><b>Explication : </b></ion-text>
     </ion-row>
     <ion-row class="ion-justify-content-start ion-margin-start">
-      <ion-text>L'explication est donc (..)</ion-text>
+      <ion-text>
+        <br/>
+        L'explication est donc (..)</ion-text>
       {{testService.questions[0]}}
-      <br>
     </ion-row>
-    <br>
-    <br>
     <ion-row class="ion-justify-content-center ion-margin-top">
       <div class="ion-text-center">
         <a color="primary" *ngIf="currentQuestionIndex+1 != questionCount " (click)="questionSuivant()">Suivant</a>

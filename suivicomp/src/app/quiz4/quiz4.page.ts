@@ -16,7 +16,7 @@ export class Quiz4Page implements OnInit {
   questionCount: number;
   currentQuestion: string;
   currentResponses: string[];
-  userResponse: boolean[] = [];
+  correctResponse: boolean[] = [];
   currentCorrectResponse : number;
 
 
@@ -27,30 +27,15 @@ export class Quiz4Page implements OnInit {
     this.currentQuestion = this.testService.questions[this.currentQuestionIndex];
     this.currentCorrectResponse = this.testService.correctResponse[this.currentQuestionIndex];
     this.currentResponses = this.testService.responses[this.currentQuestionIndex].split("-");
-
-
   }
 
   ngOnInit() {
   }
-  responseVerification(){
-    let flag = false;
-    for (let i = 0 ; i<this.userResponse.length;i++){
-      if(this.userResponse[i] == true){
-        if(i == this.currentCorrectResponse ){
-          flag = true;
-        }else{
-          flag = false;
-          break;
-        }
-      }
-    }
 
-    this.userResponse = [];
-  }
+
 
   questionSuivant() {
-    this.responseVerification();
+    this.correctResponse = [];
     this.currentQuestionIndex++;
     this.currentQuestion = this.testService.questions[this.currentQuestionIndex];
     this.currentCorrectResponse = this.testService.correctResponse[this.currentQuestionIndex];
@@ -58,7 +43,6 @@ export class Quiz4Page implements OnInit {
   }
 
   quizTerminer() {
-    this.responseVerification();
   }
 
 }
